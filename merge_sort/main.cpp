@@ -46,9 +46,11 @@ void merge_sort(T* arrayToSort, T* tempArray, int left, int right) {
     for (int current = left; current <= right; current++) {
         if (sublistLimitLeft == mid+1)
         {
+            // Left sublist is exhausted
             arrayToSort[current] = tempArray[sublistLimitRight++];
         } else if (sublistLimitRight > right)
         {
+            // Right sublist is exhausted
             arrayToSort[current] = tempArray[sublistLimitLeft++];
         } else if (Comparator::prior(tempArray[sublistLimitLeft], tempArray[sublistLimitRight]))
         {
