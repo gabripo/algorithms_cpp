@@ -13,7 +13,7 @@ void print(T* arrayToPrint, int arraySize);
 
 int main(int argc, char const *argv[])
 {
-    int arr[] = { 1, 10, 25, 4, 0 };
+    int arr[] = { 1, 10, 25, 4, 0, 19, 11, 23 };
     int arrSize = sizeof(arr) / sizeof(arr[0]);
 
     print<int>(arr, arrSize);
