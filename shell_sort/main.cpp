@@ -29,6 +29,7 @@ void shell_sort(T* arrayToSort, int arraySize) {
     for (int i = arraySize/2; i > 2 ; i /= 2)
     {
         for (int j = 0; j < i; j++) {
+            // &arrayToSort[j] is the pointer to the value to consider first
             insertion_sort_2<int, Comparator>(&arrayToSort[j], arraySize-j, i);
         }
     }
