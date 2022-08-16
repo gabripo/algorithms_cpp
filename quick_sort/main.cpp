@@ -56,11 +56,9 @@ template<typename T, typename Comparator>
 int partition(T* arrayToPartition, int left, int right, T& pivot) {
     do
     {
-        while (Comparator::prior(arrayToPartition[left], pivot))
-        {
-            left++;
-        }
-        
+        while (Comparator::prior(arrayToPartition[++left], pivot)) { };
+        while ( (left < right) && Comparator::prior(pivot, arrayToPartition[--right]) ) { };
+        swap(arrayToPartition, left, right);
     } while (left < right);
     return left;
 }
