@@ -32,7 +32,7 @@ void quick_sort(T* arrayToSort, int left, int right) {
     {
         return;
     }
-    int pivotIndex = find_pivot(arrayToSort, left, right);
+    int pivotIndex = find_pivot<T, Comparator>(arrayToSort, left, right);
     swap(arrayToSort, pivotIndex, right);
     int frstPositionRightSubarray = partition<T, Comparator>(arrayToSort, left-1, right, arrayToSort[right]);
     swap(arrayToSort, frstPositionRightSubarray, right);
