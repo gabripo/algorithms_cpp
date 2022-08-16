@@ -47,6 +47,11 @@ int find_pivot(T* arrayToPartition, int left, int right) {
 
 template<typename T>
 void swap(T* array, int firstPosition, int secondPosition) {
+    if (firstPosition == secondPosition)
+    {
+        return;
+    }
+    
     T temp = array[firstPosition];
     array[firstPosition] = array[secondPosition];
     array[secondPosition] = temp;
